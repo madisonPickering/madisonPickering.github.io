@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+	
+	
+	<!-- my css -->
+	<link rel="stylesheet" href="style.css">
+
+	<!-- import jquery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+
+    <title>Madison Pickering</title>
+	
+	<script>
+		$(document).ready(function(){
+			formatPubs();
+			
+			function formatPubs(){
+			
+				$("#pubs").children().each(function(index){
+					var num = index + 1;
+					var newText = "" + num + ". " + $(this).children("p").first().text();
+					$(this).children("p").first().text(newText);
+					
+				});
+			}
+		
+		});
+	</script>
+  </head>
+  
+  <!-- Body -->
+  <body>
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a class="navbar-brand" href="#">Madison Pickering</a>
+		<div class="navbar-nav">
+			<a class="nav-item nav-link" href="home.html">Home</a>
+			<a class="nav-item nav-link" href="publications.html">Publications <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="contact.html">Contact</a>
+		</div>
+	</nav>
+	
+	<div class="container pt-4">
+		<div class="row">
+			<div class="col-2">
+			</div>
+			<div class="col-8">
+			
+
+			  <!-- publications card -->
+			  <div class="card mb-5">
+				<div class="card-body">
+					<h5 class="card-title">Publications and Submitted Papers</h5>
+					<ul class="list-group list-group-numbered list-group-flush" id="pubs">
+						<li class="list-group-item">
+							<p>
+								[2021] Characteristics and Outcomes of an Outpatient ID E-consult Program at
+								a County Safety Net Healthcare System
+							</p>
+							<i>Madison Granger, Madison Pickering, Richard Medford, Helen King</i>.
+							<a href="publications_pdfs/#">[Abstract coming soon!]</a>
+							<br> <br>
+							<p class="card-text text-justify">
+							Project focused on the outcomes and characteristics of patients who were referred for E-consults.
+							ML models were also trained with patient information gathered a priori to determine if an E-consult
+							would require a face to face meeting. In other words, the model was trained to determine if a face to face
+							referral to a specialist would likely be required given the information known a priori about the patient.
+							</p>
+						</li>
+						<li class="list-group-item">
+							
+							<p>
+								[2021] Outcomes of Patients Contracting COVID-19 after receiving a SARS-CoV-2 Vaccination: A Nationwide Retrospective Study 
+							</p>
+							<i>Sameh Saleh, Madison Pickering, Dimpy Shah, Christoph Lehmann, Richard Medford</i>.
+							<a href="publications_pdfs/#">[Abstract coming soon!]</a>
+							<br> <br>
+							Project studied the outcomes of individuals who contracted COVID-19 after recieving one or more vaccinations,
+							as opposed to individuals who did not recieve a vaccine. The major competitive advantage this study had was 
+							its generalizability and large sample size&mdash;similar studies could often only work with the data available
+							at a single hospital, but the data set we used was taken over millions of patients at healthcare institutions
+							all over the United States.
+						</li>
+						<li class="list-group-item">
+							<p>
+								[2021] NetworkSIR and EnvironmentalSIR: Effective, Open-Source Epidemic Modeling in the Absence of Data
+							</p>
+							<i>Madison Pickering, Subbarayan Venkatesan, Christoph Lehmann, Sameh Saleh, Richard Medford</i>.
+							<a href="publications_pdfs/AMIA_NetworkSIR.pdf">[Link]</a>
+							<br> <br>
+							This paper is essentially a summary of my Master's thesis. It has been submitted to AMIA 2021, and
+							was written with a primarily medical audience in mind. (Consequently, it has none of the discussions of
+							efficency that the thesis does.)
+						</li>
+						<li class="list-group-item">
+							<p>
+								[2020] NetworkSIR And EnvironmentalSIR: Two Simple Distributed Mechanisms For Modeling Epidemics
+							</p>
+							<i>Madison Pickering</i>.
+							<a href="publications_pdfs/MS_Thesis__Network_SIR_Final">[Link]</a>
+							<a href="publications_pdfs/NetworkSIR_EnvSIR_repoLinks.txt">[Code Repository Information]</a>
+							<br> <br>
+							This is my Master's thesis, whom I was advised by Dr. Subbarayan Venkatesan at UT Dallas for.
+							It provides an in-depth discussion of assumptions made by various disease modeling paradigms,
+							extends the SIR model to adapt it to a distributed system (NetworkSIR), and then extends NetworkSIR
+							in order to model indirect disease spread through the environment (EnvironmentalSIR). As far as I know, it is the first
+							network-based model that captures environment-to-human disease spread.
+							<br> <br>
+							There is unfortunately some errata associated with this document: the equation on bullet point 2, page 27
+							is incorrect, which has slightly thrown off some of the numbers and graphs in the results and discussion.
+							The more recent paper on NetworkSIR has fixed this, and recollected all the data discussed in this thesis;
+							please refer to it for more accurate results.
+						
+						</li>
+						<li class="list-group-item">
+							<p>
+								[2020] Tracing Malicious Transactions in a Disconnected Micro-payment System.
+							</p>
+							<i>Trusit Shah, Madison Pickering, Subbarayan Venkatesan, Max Irby, Lan Vu, Tung Vu</i>.
+							<a href="publications_pdfs/Offline_Payment_System.pdf">[Link]</a>
+							<br> <br>
+							This was originally submitted to ICDCS 2020, but required revisions. (More discussion of security models.)
+							Trusit Shah, who lead the project, graduated about a month before its submission and work on it sort of
+							stopped and started intermittently for about a year and a half after its submission, by various people. This project is
+							mostly listed here for the sake of completeness.
+						</li>
+					</ul>
+				</div>
+			  </div>
+			  
+			</div>
+
+			<div class="col-2">
+			</div>
+		</div>
+	</div>
+	
+	
+  </body>
+
+</html>

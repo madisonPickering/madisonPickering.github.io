@@ -1,5 +1,6 @@
 nav {
-	background-color: rgb(70, 17, 122);
+	/*background-color: rgb(70, 17, 122); */
+	background-color: rgb(27, 12, 87);
 }
 
 /*
@@ -8,6 +9,15 @@ img{
 	height: 80px;
 }
 */
+
+body {
+	background-color: rgb(247, 247, 247);
+}
+
+/* used to bold first line of publications page */
+li p:first-child{
+		font-weight: bold;
+}
 
 div.col.md-8{
 	background-color: red;

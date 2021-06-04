@@ -1,0 +1,26 @@
+
+NetworkSIR/EnvironmentalSIR:
+	https://github.com/madisonPickering/EnvironmentalSIR
+
+Other, related repositories:
+
+	https://github.com/madisonPickering/EnvironmentalSIR_datahelper
+		Used to generate information/statistics over multiple runs of EnvironmentalSIR/NetworkSIR
+	
+	https://github.com/madisonPickering/EnvironmentalSIR_probabilityHelper
+		Used to calculate the probability that a CPI of a given duration will occur. Also includes
+		the code used for performing Pearson's Chi^2 test as referenced in the above papers.
+		
+	https://github.com/madisonPickering/EnvironmentalSIR_Datasets
+		The data sets I used for EnvironmentalSIR, specified as adjacency lists.
+	
+	https://github.com/madisonPickering/EnvSIR_HiResDatahelper
+		The code I used to convert the data sets collected in:
+		
+		Salathe, M., Kazandjieva, M., Lee, J. W., Levis, P., Feldman, M. W., and Jones, J.H.
+		”A high-resolution human contact network for infectious disease transmission.” 
+		Proceedings of the National Academy of Sciences of the United States of America, 107(51),
+		22020–22025. (2010).
+		
+		Into adjacency lists.
+			
