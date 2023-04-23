@@ -27,10 +27,21 @@
 	<script>
 		$(document).ready(function(){
 			formatPubs();
+			formatPosters();
 			
 			function formatPubs(){
 			
 				$("#pubs").children().each(function(index){
+					var num = index + 1;
+					var newText = "" + num + ". " + $(this).children("p").first().text();
+					$(this).children("p").first().text(newText);
+					
+				});
+			}
+			
+			function formatPosters(){
+			
+				$("#posters").children().each(function(index){
 					var num = index + 1;
 					var newText = "" + num + ". " + $(this).children("p").first().text();
 					$(this).children("p").first().text(newText);
@@ -49,6 +60,7 @@
 		<a class="navbar-brand" href="index.html">Madison Pickering</a>
 		<div class="navbar-nav">
 			<a class="nav-item nav-link" href="index.html">Home</a>
+			<a class="nav-item nav-link" href="teaching.html">Teaching</a>
 			<a class="nav-item nav-link" href="publications.html">Publications <span class="sr-only">(current)</span></a>
 			<a class="nav-item nav-link" href="contact.html">Contact</a>
 		</div>
@@ -64,42 +76,29 @@
 			  <!-- publications card -->
 			  <div class="card mb-5">
 				<div class="card-body">
-					<h5 class="card-title">Publications</h5>
-					<ul class="list-group list-group-numbered list-group-flush" id="pubs">
-						<li class="list-group-item">
+					<h5 class="card-title">Paper Publications</h5>
+					<ul class="list-group list-group-numbered list-group-flush" id="pubs">				
+							<li class="list-group-item">
 							<p>
-								[2022] Clinical and Demographic Characteristics of COVID-19 in Pediatric Patients in the United States
+								[2023] Defining "Broken": User Experiences and Remediation Tactics When Ad-Blocking or Tracking-Protection Tools Break a Website's User Experience
 							</p>
-							<i> Milan Ho, BS, Zachary M Most, MD, MSc, Marlon Diaz, BS, Julia A Casazza, BS, Bhaskar Thakur, PhD, Sameh Saleh, MD, <b>Madison Pickering, MS</b>, Trish M Perl, MD, MSc, Christoph U Lehmann, MD, Richard J Medford, MD, Robert W Turer, MD, MSE, MSACI</i>. 
-							<a href="https://academic.oup.com/ofid/article/9/Supplement_2/ofac492.136/6902140">[Link]</a>
+							<i>A Nisenoff, A Borem, <b>M Pickering</b>, G Nakanishi, M Thumpasery, B Ur.</i>. 
+							<a href="https://www.usenix.org/system/files/sec23fall-prepub-83-nisenoff.pdf">[Link]</a>
 							<br> <br>
 							<p class="card-text text-justify">
-							I worked on collecting and analyzing early COVID-19 data while working at UTSouthwestern Medical Center. 
-							This project built off of some of the work that I did while I was primarily affiliated with UTSouthwestern Medical Center.
+							Project focused on how users experience and respond to the website breakage caused by tracking protection tools.
 							</p>
-						</li>
-						<li class="list-group-item">
+							</li>
+					
+							<li class="list-group-item">
 							<p>
-								[2022] Risk Factors for COVID-19 Infection and Outcomes in People Living with HIV
+								[2023] Incidence and Risk Factors for Severe Outcomes in Pediatric Patients with COVID-19
 							</p>
-							<i> John J Hanna, MD, Liyu B Geresu, MS, Marlon Diaz, BS, <b>Madison Pickering, MS</b>, Julia A Casazza, BS, Milan Ho, BS, Heather Lanier, B.S., A L exander P Radunsky, ScD, Sameh N Saleh, MD, Zachary M Most, MD, MSc, Trish M Perl, MD, MSc, Robert W Turer, MD, MSE, MSACI, Christoph U Lehmann, MD, Jeremy Y Chow, M.D., M.S., Richard J Medford, MD</i>. 
-							<a href="https://academic.oup.com/ofid/article/9/Supplement_2/ofac492.164/6902351">[Link]</a>
+							<i>M Ho, Z Most, T Perl, M Diaz, J Casazza, S Saleh, <b>M Pickering</b>, A Radunsky, J Hanna, B Thakur, C Lehmann, R Medford, and R Turer.</i>. 
+							<a href="https://publications.aap.org/hospitalpediatrics/article/doi/10.1542/hpeds.2022-006833/191042/Incidence-and-Risk-Factors-for-Severe-Outcomes-in">[Link]</a>
 							<br> <br>
 							<p class="card-text text-justify">
-							I worked on collecting and analyzing early COVID-19 data while working at UTSouthwestern Medical Center. 
-							This project built off of some of the work that I did while I was primarily affiliated with UTSouthwestern Medical Center.
-							</p>
-						</li>
-						<li class="list-group-item">
-							<p>
-								[2022] Vaccination During Acute COVID-19 Infection Protects Against 30 Day Adverse Outcomes
-							</p>
-							<i> Julia A Casazza, BS, Robert W Turer, MD, MSE, MSACI, Sameh N Saleh, MD, <b>Madison Pickering, MS</b>, Marlon Diaz, BS, Milan Ho, n/a, Pankil Shah, PhD, Dimpy Shah, PhD, Christoph U Lehmann, MD, FAAP, FACMI, FIAHSI, Bhaskar Thakur, PhD, Richard J Medford, MD</i>. 
-							<a href="https://academic.oup.com/ofid/article/9/Supplement_2/ofac492.998/6903278">[Link]</a>
-							<br> <br>
-							<p class="card-text text-justify">
-							I worked on collecting and analyzing early COVID-19 data while working at UTSouthwestern Medical Center. 
-							This project built off of some of the work that I did while I was primarily affiliated with UTSouthwestern Medical Center.
+							Project analyzed the risk factors for severe outcomes associated with COVID-19 infection for pediatric patients.
 							</p>
 						</li>
 						
@@ -151,6 +150,51 @@
 							please refer to it for more accurate results.
 						
 						</li>
+					</ul>
+				</div>
+			  </div>
+			  
+			   <!-- publications card -->
+			  <div class="card mb-5">
+				<div class="card-body">
+					<h5 class="card-title">Posters and Abstracts</h5>
+					<ul class="list-group list-group-numbered list-group-flush" id="posters">
+
+						<li class="list-group-item">
+							<p>
+								[2022] Clinical and Demographic Characteristics of COVID-19 in Pediatric Patients in the United States
+							</p>
+							<i> Milan Ho, BS, Zachary M Most, MD, MSc, Marlon Diaz, BS, Julia A Casazza, BS, Bhaskar Thakur, PhD, Sameh Saleh, MD, <b>Madison Pickering, MS</b>, Trish M Perl, MD, MSc, Christoph U Lehmann, MD, Richard J Medford, MD, Robert W Turer, MD, MSE, MSACI</i>. 
+							<a href="https://academic.oup.com/ofid/article/9/Supplement_2/ofac492.136/6902140">[Link]</a>
+							<br> <br>
+						</li>
+						<li class="list-group-item">
+							<p>
+								[2022] Risk Factors for COVID-19 Infection and Outcomes in People Living with HIV
+							</p>
+							<i> John J Hanna, MD, Liyu B Geresu, MS, Marlon Diaz, BS, <b>Madison Pickering, MS</b>, Julia A Casazza, BS, Milan Ho, BS, Heather Lanier, B.S., A L exander P Radunsky, ScD, Sameh N Saleh, MD, Zachary M Most, MD, MSc, Trish M Perl, MD, MSc, Robert W Turer, MD, MSE, MSACI, Christoph U Lehmann, MD, Jeremy Y Chow, M.D., M.S., Richard J Medford, MD</i>. 
+							<a href="https://academic.oup.com/ofid/article/9/Supplement_2/ofac492.164/6902351">[Link]</a>
+							<br> <br>
+						</li>
+						<li class="list-group-item">
+							<p>
+								[2022] Vaccination During Acute COVID-19 Infection Protects Against 30 Day Adverse Outcomes
+							</p>
+							<i> Julia A Casazza, BS, Robert W Turer, MD, MSE, MSACI, Sameh N Saleh, MD, <b>Madison Pickering, MS</b>, Marlon Diaz, BS, Milan Ho, n/a, Pankil Shah, PhD, Dimpy Shah, PhD, Christoph U Lehmann, MD, FAAP, FACMI, FIAHSI, Bhaskar Thakur, PhD, Richard J Medford, MD</i>. 
+							<a href="https://academic.oup.com/ofid/article/9/Supplement_2/ofac492.998/6903278">[Link]</a>
+							<br> <br>
+						</li>
+											
+						<li class="list-group-item">
+							<p>
+								[2021] Characteristics and Outcomes of an Outpatient Infectious Diseases E-consult Program at a County Safety-Net Healthcare System
+							</p>
+							<i>Madison Granger, <b>Madison Pickering</b>, Richard Medford, Helen King</i>. 
+							<a href="https://academic.oup.com/ofid/article/9/7/ofac341/6645933">[Link]</a>
+							<br> <br>
+						</li>
+		
+						
 					</ul>
 				</div>
 			  </div>
