@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, 
+    shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+	
+	<!-- my css -->
+	<link rel="stylesheet" href="style.css">
+
+    <title>Madison Pickering</title>
+  </head>
+  
+  <!-- Body -->
+  <body>
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<a class="navbar-brand" href="index.html">Madison Pickering</a>
+		<div class="navbar-nav">
+			<a class="nav-item nav-link" href="index.html">Home</a>
+			<a class="nav-item nav-link" href="projects.html">Projects</a>
+			<!-- <a class="nav-item nav-link" href="teaching.html">Teaching</a> -->
+			<a class="nav-item nav-link" href="https://scholar.google.com/citations?user=Dt6xWg8AAAAJ&hl=en">Google Scholar <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="contact.html">Contact</a>
+		</div>
+	</nav>
+	
+	<div class="container">
+
+		<div class="row">
+			<!-- values card -->
+			<div class="card mt-5">
+				<div class="card-body">
+					<h5 class="card-title"><a href="#LLM-values">Investigating LLM Values in Subjective Everyday Tasks</a></h5>
+					<p>
+					LLMs are increasingly being adopted as <i>agents</i>, or autonomous entities that take actions on behalf of a user. 
+					These agents may be used for a variety of everyday tasks, such as summarizing emails, determining what flight to pick, 
+					or even how much to tip at a restaurant. However, users may complete these everyday tasks differently according to 
+					their own personal values. For example, an individual who values environmentalism may choose a more expensive flight that has 
+					fewer CO2 emissions. To investigate the degree to which LLMs accurately reflect the values of their users, we 
+					measured how both humans and LLMs completed a set of everyday tasks. We found that humans almost always exhibited 
+					great diversity in how they chose to complete tasks while LLMs responded more monolithically.
+					</p>	
+					<hr/>
+					For more details, please refer to “Implicit Values in How Humans and LLMs Complete Subjective Everyday Tasks”, to appear at EMNLP 2025's main conference.
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- values card -->
+			<div class="card mt-5">
+				<div class="card-body">
+					<h5 class="card-title"><a href="#LLM-passwords">Do LLMs Accurately Judge the Strength of Passwords?</a></h5>
+					<p>
+					Text passwords remain a common form of authentication. To ensure that harmful actors do not get access to user accounts, user passwords should be hard to guess. If a user is about to choose a predictable password to secure their account, they should be notified of this so that they can choose a stronger password. However, most existing methods for determining if a password is strong or weak leverage statistical models trained on large data breaches. Because there have been few large password breaches in frequent years, these models might have worse performance on the passwords that users are picking today (e.g., “oliviarodrigo220” would be much weaker in 2025 than in 2010). We consequently investigated if LLMs--which have relatively minimal data requirements--could be used for password modeling. We found evidence that LLMs excel at modeling passwords resembling natural language, but their computational costs do not render the existing state of the art obsolete.
+					</p>
+					<hr/>
+					This work is currently in submission.
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- values card -->
+			<div class="card mt-5">
+				<div class="card-body">
+					<h5 class="card-title"><a href="#LLM-policies">Can LLMs be Used as an Interface for End-User Programming?</a></h5>
+					<p>
+						End-user or nonexpert programming promises to place meaningful technological decisions back in the hands of ordinary people by eliminating the need for a middleman (a programmer) to interpret the user’s wishes. However, existing end-user programming approaches overwhelmingly require users to learn a GUI. Aside from requiring mental energy to learn, these GUIs often only allow users to express a small number of tasks. Our work instead posits that users could instead use natural language (prose) to communicate programming tasks to an LLM, eliminating the need to learn a GUI and allowing for more varied tasks to be expressed. We investigated how both end-users and programmers expressed self-contained, computational tasks in prose both to each other and to an LLM. We found that while programming experience does help users express tasks, being able to clearly outline examples was more impactful. Further, LLMs struggled immensely to produce working code once programming tasks became nuanced and non-trivial.
+					</p>
+					<hr/>
+					For more details, please refer to <a href="https://dl.acm.org/doi/pdf/10.1145/3706598.3713271">our paper</a> which appeared at ACM CHI 2025.
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- values card -->
+			<div class="card mt-5 mb-5">
+				<div class="card-body">
+					<h5 class="card-title"><a href="#LLM-policies">Leveraging LLMs for Normative Privacy Policy Annotations</a></h5>
+					<p>
+						Privacy policies' length and legal language make them virtually inscrutable. This practically serves to obfuscate the extent to which data is collected and what the privacy implications of collection are. An intuitive method of describing privacy implications (and violations) is described by the contextual integrity (CI) framework, which at a high level states that a privacy violation occurs when the relevant norms for that data are violated. For example, it may be fine for a doctor to send medical photos to a podiatrist, but not to post them to social media. By coupling the CI framework with one for data governance, we can determine if privacy violations are occurring and describe relevant strategies, norms, and rules for shared data. Because applying these normative frameworks has traditionally been done manually (which has prevented their adoption at scale) we leveraged an LLM to apply them by performing annotations. Our best performing LLM approached the same accuracy as experts.
+					</p>
+					<hr/>
+					For more details, please refer to <a href="https://doi.org/10.56553/popets-2025-0062">our paper</a> which appeared at the 2025 Privacy Enhancing Technologies Symposium (PETS).
+				</div>
+			</div>
+		</div>
+				
+	</div>
+	
+	
+  </body>
+
+</html>
